@@ -149,7 +149,8 @@ export function ChildrenTab() {
             <div className="flex items-center justify-center gap-4">
               <button
                 onClick={() => setTimeAmount((v) => Math.max(5, v - 5))}
-                className="w-11 h-11 rounded-full bg-slate-100 hover:bg-slate-200 text-xl font-bold"
+                disabled={timeAmount <= 5}
+                className="w-11 h-11 rounded-full bg-slate-100 hover:bg-slate-200 disabled:opacity-30 disabled:cursor-not-allowed text-xl font-bold"
               >
                 −
               </button>

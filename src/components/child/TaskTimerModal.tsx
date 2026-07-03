@@ -140,13 +140,15 @@ export function TaskTimerModal({ task, childId, onClose }: TaskTimerModalProps) 
             <div className="flex items-center justify-center gap-3 mb-5">
               <button
                 onClick={() => adjustSetup(-60)}
-                className="w-11 h-11 rounded-full bg-slate-100 hover:bg-slate-200 font-bold text-lg"
+                disabled={totalSeconds <= 30}
+                className="w-11 h-11 rounded-full bg-slate-100 hover:bg-slate-200 disabled:opacity-30 disabled:cursor-not-allowed font-bold text-lg"
               >
                 −1m
               </button>
               <button
                 onClick={() => adjustSetup(-10)}
-                className="w-11 h-11 rounded-full bg-slate-100 hover:bg-slate-200 font-bold text-xs"
+                disabled={totalSeconds <= 30}
+                className="w-11 h-11 rounded-full bg-slate-100 hover:bg-slate-200 disabled:opacity-30 disabled:cursor-not-allowed font-bold text-xs"
               >
                 −10s
               </button>

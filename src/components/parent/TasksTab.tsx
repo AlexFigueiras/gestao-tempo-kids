@@ -200,7 +200,8 @@ export function TasksTab() {
                   <button
                     type="button"
                     onClick={() => setForm((f) => ({ ...f, stars: Math.max(1, f.stars - 1) }))}
-                    className="w-9 h-9 rounded-lg bg-slate-100 hover:bg-slate-200 font-bold"
+                    disabled={form.stars <= 1}
+                    className="w-9 h-9 rounded-lg bg-slate-100 hover:bg-slate-200 disabled:opacity-30 disabled:cursor-not-allowed font-bold"
                   >
                     −
                   </button>
